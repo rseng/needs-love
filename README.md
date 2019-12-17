@@ -35,12 +35,12 @@ process, but doesn't have the bandwidth to finish the dough and put it in the ov
 
 #### What makes a good starter?
 
-Thus, a good starter has expertise in some area, or a project started, but doen't have time to finish up.
+A good starter has expertise in some area, or a project started, but doesn't have time to finish up.
 
 ### Finishers
 
 Finishers are hungry for opportunity, and fun projects. A finisher can be
-very independent and curious, or ask for a bit more help. The finish wants
+very independent and curious, or ask for a bit more help. The finisher wants
 to take some project that has been started, and turn it into delicious bread.
 
 #### What makes a good finisher?
@@ -53,9 +53,9 @@ The match between the starter, both project and individual, and the finisher,
 is very important. Namely:
 
  - the starter should have some expertise in the technology, or vision for it to interact with the finisher.
- - the finisher should have less knowledge or expertise about this particular technology, and the aim is to learn it
- - the starter and finisher should be matched based on having these opposite levels of skill for some domain or technology
- - an established method of asking questions and general communication should be established (e.g., GitHub issues)
+ - the finisher should have less knowledge or expertise about this particular technology, and the aim is to learn it.
+ - the starter and finisher should be matched based on having these opposite levels of skill for some domain or technology.
+ - an established method of asking questions and general communication should be established (e.g., GitHub issues).
 
 It's clear that a good match can make or break a team. This is why the matching process is so important.
 
