@@ -1,5 +1,9 @@
 # Needs Love
 
+![img/needs-love-2.jpg](img/needs-love-2.jpg)
+
+[![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/)
+
 ## Background
 
 This is an incubating project idea that will match research software engineers
