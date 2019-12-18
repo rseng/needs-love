@@ -13,6 +13,10 @@ There are plenty of avenues for online learning, including tutorials, courses,
 and documentation. However, sometimes the best way to learn is to have project
 with one or more explicit goals to accomplish. This is the vision behind needs-love.
 
+Do you have a project that needs love? [Tell us about it](https://forms.gle/dguHeJuQ1BW593UVA).
+We'll be adding automation to parse and render your contribution into
+the repository shortly!
+
 ## What Needs Love?
 
 You might feel overwhelmed or frustrated by a lack of time to finish
