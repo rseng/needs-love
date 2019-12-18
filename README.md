@@ -1,6 +1,6 @@
 # Needs Love
 
-![img/needs-love-2.jpg](img/needs-love-2.jpg)
+![img/needs-love.jpg](img/needs-love.jpg)
 
 [![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/)
 
