@@ -14,8 +14,8 @@ and documentation. However, sometimes the best way to learn is to have project
 with one or more explicit goals to accomplish. This is the vision behind needs-love.
 
 Do you have a project that needs love? [Tell us about it](https://forms.gle/dguHeJuQ1BW593UVA).
-We'll be adding automation to parse and render your contribution into
-the repository shortly!
+Do you have an idea for a project that needs love? [We want to hear about that too](https://forms.gle/KqFv2T3zU5Vu8LSGA).
+We'll be adding automation to parse and render your contribution into the repository shortly!
 
 ## What Needs Love?
 
