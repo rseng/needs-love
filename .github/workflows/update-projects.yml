@@ -1,0 +1,42 @@
+name: update-projects
+
+on:
+  schedule:
+    # Nightly at 2:30am 
+    - cron: 30 2 * * *
+
+jobs:
+  UpdateProjects:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v1
+    - name: Cache Data
+      id: cache-data
+    - name: Setup python environment
+      run: conda create --quiet --name testenv
+    - name: Update ideas and projects
+      run: |
+        export PATH="/usr/share/miniconda/bin:$PATH"
+        source activate testenv
+        python .github/update-ideas.py
+        python .github/update-projects.py
+    - name: Checkout New Branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        UPDATE_BRANCH: master
+      run: |
+        echo "GitHub Actor: ${GITHUB_ACTOR}"
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git branch
+        echo "Branch to push to is ${UPDATE_BRANCH}"
+        git checkout -b ${UPDATE_BRANCH}
+        git branch
+
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+
+        git pull origin ${UPDATE_BRANCH}
+        git add _data/*
+        git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')" --allow-empty
+        git push origin ${UPDATE_BRANCH}
