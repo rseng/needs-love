@@ -2,7 +2,7 @@
 
 ![img/needs-love.jpg](img/needs-love.jpg)
 
-[![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/)
+[![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation) [![Gitter](https://badges.gitter.im/rseng/community.svg)](https://gitter.im/rseng/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Background
 
@@ -66,6 +66,13 @@ is very important. Namely:
  - an established method of asking questions and general communication should be established (e.g., GitHub issues).
 
 It's clear that a good match can make or break a team. This is why the matching process is so important.
+
+## What if someone doesn't ask for help?
+
+Asking for help can be hard! In some cases, asking for help can look like labeling
+an issue with "Good First Issue." For this reason, for the interested folks that want to
+persue a list of open source, research software engineering efforts, we provide the 
+[awesome-rseng](https://github.com/rseng/awesome-rseng) awesome list.
 
 ## How does it work?
 
