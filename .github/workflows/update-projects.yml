@@ -1,7 +1,6 @@
 name: update-projects
 
 on:
-  pull_request: []
   schedule:
     # Nightly at 2:30am 
     - cron: 30 2 * * *
