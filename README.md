@@ -2,6 +2,7 @@
 
 ![img/needs-love.jpg](img/needs-love.jpg)
 
+[![https://img.shields.io/badge/rseng-needs love-purple](https://img.shields.io/badge/rseng-needs-love)](https://github.com/rseng/needs-love)
 [![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation) [![Gitter](https://badges.gitter.im/rseng/community.svg)](https://gitter.im/rseng/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Background
