@@ -16,6 +16,7 @@ jobs:
       uses: rseng/good-first-issues@add/action-label
       with:
         label: 'needs-love'
+        repos-file: .github/repos.txt
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Generate matched tagged posts in _matched
@@ -23,6 +24,7 @@ jobs:
       with:
         label: 'matched'
         collection: '_matched'
+        repos-file: .github/repos.txt
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout New Branch
