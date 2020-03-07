@@ -10,15 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v1
-    - name: Setup python environment
-      run: conda create --quiet --name testenv
-    - name: Update ideas and projects
-      run: |
-        export PATH="/usr/share/miniconda/bin:$PATH"
-        source activate testenv
-        python .github/update-ideas.py
-        python .github/update-projects.py
+      uses: actions/checkout@v2
+    - name: Generate needs-love tagged posts in _issues
+      uses: rseng/good-first-issues@add/action-label
+      with:
+        label: 'needs-love'
+        repos-file: .github/repos.txt
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Generate matched tagged posts in _matched
+      uses: rseng/good-first-issues@add/action-label
+      with:
+        label: 'matched'
+        collection: '_matched'
+        repos-file: .github/repos.txt
+        token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Checkout New Branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,6 +42,6 @@ jobs:
         git config --global user.email "github-actions@users.noreply.github.com"
 
         git pull origin ${UPDATE_BRANCH}
-        git add _data/*
+        git add docs/*
         git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')" --allow-empty
         git push origin ${UPDATE_BRANCH}

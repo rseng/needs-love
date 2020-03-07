@@ -2,7 +2,7 @@
 
 ![img/needs-love.jpg](img/needs-love.jpg)
 
-[![https://img.shields.io/badge/rseng-needs--love-purple](https://img.shields.io/badge/rseng-needs-love)](https://github.com/rseng/needs-love)
+[![https://img.shields.io/badge/rseng-needs--love-purple](https://img.shields.io/badge/rseng-needs--love-purple)](https://github.com/rseng/needs-love)
 [![https://img.shields.io/badge/rseng-project-purple](https://img.shields.io/badge/rseng-project-purple)](https://rseng.github.io/) [![https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg](https://good-labs.github.io/greater-good-affirmation/assets/images/badge.svg)](https://good-labs.github.io/greater-good-affirmation) [![Gitter](https://badges.gitter.im/rseng/community.svg)](https://gitter.im/rseng/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Background
@@ -13,10 +13,6 @@ with projects. It's a peer-to-peer network for learning by way of doing.
 There are plenty of avenues for online learning, including tutorials, courses,
 and documentation. However, sometimes the best way to learn is to have project
 with one or more explicit goals to accomplish. This is the vision behind needs-love.
-
-Do you have a project that needs love? [Tell us about it](https://forms.gle/dguHeJuQ1BW593UVA).
-Do you have an idea for a project that needs love? [We want to hear about that too](https://forms.gle/KqFv2T3zU5Vu8LSGA).
-We'll be adding automation to parse and render your contribution into the repository shortly!
 
 ## What Needs Love?
 
@@ -79,16 +75,27 @@ persue a list of open source, research software engineering efforts, we provide 
 
 ### Submitting a Project
 
-You can submit a project that needs love simply by opening an issue, and 
+You can submit a project that needs love simply by opening an issue, and selecting
+the "Project or Idea that needs love" template.
 
+![img/needs-love-template.png](img/needs-love-template.png) 
 
-These sections will include:
+Once your idea is submit, it will (each night) render to the interface of
+projects that need love (under development)
 
- - how to submit a project
- - how to request a match
- - how to update a match
- - perhaps guidelines for contributing, etc.
+### Requesting a Match
 
-And more! I need to create templates, workflows, and think this through a bit more.
+When you navigate the web interface to find an issue that looks interesting,
+if you click the issue to navigate to the GitHub interface, you can have discussion
+with the author about how you might like to be involved. If there is match, great!
+You can be assigned to the issue, and the `needs-love` label is removed
+and replaced with the `matched` label. 
 
-**to be written**
+### Updating a Match
+
+If you can no longer work on a project or idea, you should notify the starter 
+(the person that originally submit the issue) about this change, and he or she
+can remove the `matched` label and add the `needs-love` label back. The issue
+will again render in the interface.
+
+**more to be written**
