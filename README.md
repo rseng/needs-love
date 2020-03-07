@@ -77,6 +77,11 @@ persue a list of open source, research software engineering efforts, we provide 
 
 ## How does it work?
 
+### Submitting a Project
+
+You can submit a project that needs love simply by opening an issue, and 
+
+
 These sections will include:
 
  - how to submit a project

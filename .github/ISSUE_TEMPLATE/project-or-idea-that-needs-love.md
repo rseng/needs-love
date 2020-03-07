@@ -3,7 +3,7 @@ name: Project or Idea that Needs Love
 about: This template is intended for opening issues that should be parsed as items
   (projects or ideas) that need love.
 title: "[needs-love] "
-labels: help wanted
+labels: needs-love
 assignees: ''
 
 ---
