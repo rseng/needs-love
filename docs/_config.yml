@@ -21,16 +21,6 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "issues"
-    values:
-      layout: "issue"
-  - scope:
-      path: ""
-      type: "matched"
-    values:
-      layout: "matched"
 
 #Others
 markdown: kramdown
