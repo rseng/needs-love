@@ -12,14 +12,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Generate needs-love tagged posts in _issues
-      uses: rseng/good-first-issues@add/action-label
+      uses: rseng/good-first-issues@add/escape-title
       with:
         label: 'needs-love'
         repos-file: .github/repos.txt
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Generate matched tagged posts in _matched
-      uses: rseng/good-first-issues@add/action-label
+      uses: rseng/good-first-issues@add/escape-title
       with:
         label: 'matched'
         collection: '_matched'
