@@ -35,7 +35,7 @@ jobs:
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git branch
         printf "Branch to push to is ${UPDATE_BRANCH}\n"
-        git checkout -b ${UPDATE_BRANCH}
+        git checkout ${UPDATE_BRANCH} || git checkout -b ${UPDATE_BRANCH}
         git branch
 
         git config --global user.name "github-actions"
