@@ -31,10 +31,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         UPDATE_BRANCH: master
       run: |
-        echo "GitHub Actor: ${GITHUB_ACTOR}"
+        printf "GitHub Actor: ${GITHUB_ACTOR}\n"
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git branch
-        echo "Branch to push to is ${UPDATE_BRANCH}"
+        printf "Branch to push to is ${UPDATE_BRANCH}\n"
         git checkout -b ${UPDATE_BRANCH}
         git branch
 
@@ -43,5 +43,11 @@ jobs:
 
         git pull origin ${UPDATE_BRANCH}
         git add docs/*
-        git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')" --allow-empty
-        git push origin ${UPDATE_BRANCH}
+
+        if git diff-index --quiet HEAD --; then
+           printf "No changes\n"
+        else
+           printf "Changes\n"
+           git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')"
+           git push origin ${UPDATE_BRANCH}
+        fi
