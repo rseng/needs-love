@@ -5,48 +5,18 @@ on:
     types: [labeled, unlabeled]
 
 jobs:
-  UpdateProjects:
+  UpdateLabels:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-    - name: Generate needs-love tagged posts in _issues
-      uses: rseng/good-first-issues@add/escape-title
-      with:
-        label: 'needs-love'
-        repos-file: .github/repos.txt
-        token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Generate matched tagged posts in _matched
-      uses: rseng/good-first-issues@add/escape-title
-      with:
-        label: 'matched'
-        collection: '_matched'
-        repos-file: .github/repos.txt
-        token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Checkout New Branch
+    - name: Setup python environment
+      run: conda create --quiet --name needslove requests
+    - name: Update Labels for needs-love or matched
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        UPDATE_BRANCH: master
       run: |
-        printf "GitHub Actor: ${GITHUB_ACTOR}\n"
-        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-        git branch
-        printf "Branch to push to is ${UPDATE_BRANCH}\n"
-        git checkout ${UPDATE_BRANCH} || git checkout -b ${UPDATE_BRANCH}
-        git branch
-
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@users.noreply.github.com"
-
-        git pull origin ${UPDATE_BRANCH}
-        git add docs/*
-
-        if git diff-index --quiet HEAD --; then
-           printf "No changes\n"
-        else
-           printf "Changes\n"
-           git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')"
-           git push origin ${UPDATE_BRANCH}
-        fi
+        # Absolutely must download specific sha of script
+        wget https://raw.githubusercontent.com/rseng/needs-love/88a1bb1ba4ff0ac873654cf4a7ca01e3ff0bb7c8/.github/update-labels.py
+        export PATH="/usr/share/miniconda/bin:$PATH"
+        source activate needslove
+        chmod +x update-labels.py
+        python update-labels.py
