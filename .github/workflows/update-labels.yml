@@ -1,0 +1,52 @@
+name: update-labels
+
+on:
+  issues:
+    types: [labeled, unlabeled]
+
+jobs:
+  UpdateProjects:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Generate needs-love tagged posts in _issues
+      uses: rseng/good-first-issues@add/escape-title
+      with:
+        label: 'needs-love'
+        repos-file: .github/repos.txt
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Generate matched tagged posts in _matched
+      uses: rseng/good-first-issues@add/escape-title
+      with:
+        label: 'matched'
+        collection: '_matched'
+        repos-file: .github/repos.txt
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Checkout New Branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        UPDATE_BRANCH: master
+      run: |
+        printf "GitHub Actor: ${GITHUB_ACTOR}\n"
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git branch
+        printf "Branch to push to is ${UPDATE_BRANCH}\n"
+        git checkout ${UPDATE_BRANCH} || git checkout -b ${UPDATE_BRANCH}
+        git branch
+
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+
+        git pull origin ${UPDATE_BRANCH}
+        git add docs/*
+
+        if git diff-index --quiet HEAD --; then
+           printf "No changes\n"
+        else
+           printf "Changes\n"
+           git commit -m "Automated deployment to update projects $(date '+%Y-%m-%d')"
+           git push origin ${UPDATE_BRANCH}
+        fi

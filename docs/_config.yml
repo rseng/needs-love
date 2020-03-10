@@ -6,12 +6,10 @@ github:       "https://github.com/rseng/needs-love"
 
 # Collections
 collections:
-    issues:
-      output: true
-      permalink: /:collection/:title/
-    matched:
-      output: true
-      permalink: /:collection/:title/
+  issues:
+    output: true
+  matched:
+    output: true
 
 # Defaults
 defaults:
