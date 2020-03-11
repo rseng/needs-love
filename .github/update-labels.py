@@ -38,6 +38,7 @@ def main():
     action = payload.get('action')
     labels = set(["matched", "needs-love"])
     label = payload.get('label')
+    print(label)
     labels.remove(label)
     other_label = list(labels)[0]
 
