@@ -26,13 +26,13 @@ def main():
     # We will need the issue URL to update
     issue_url = "%s/labels" % payload.get('issue')['url']
 
-    # Headers must include token
-    headers = {"Authorization": "Bearer %s" % token}
-
     # get token from environment
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         sys.exit("Token is required to update labels.")
+
+    # Headers must include token
+    headers = {"Authorization": "Bearer %s" % token}
 
     # Create variables for label added or removed, and action
     action = payload.get('action')
