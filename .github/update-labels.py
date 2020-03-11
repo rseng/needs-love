@@ -37,8 +37,7 @@ def main():
     # Create variables for label added or removed, and action
     action = payload.get('action')
     labels = set(["matched", "needs-love"])
-    label = payload.get('label')
-    print(label)
+    label = payload.get('label')['name']
     labels.remove(label)
     other_label = list(labels)[0]
 
