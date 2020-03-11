@@ -9,7 +9,6 @@
 
 This is an incubating project idea that will match research software engineers
 with projects. It's a peer-to-peer network for learning by way of doing.
-
 There are plenty of avenues for online learning, including tutorials, courses,
 and documentation. However, sometimes the best way to learn is to have project
 with one or more explicit goals to accomplish. This is the vision behind needs-love.
@@ -41,28 +40,63 @@ process, but doesn't have the bandwidth to finish the dough and put it in the ov
 #### What makes a good starter?
 
 A good starter has expertise in some area, or a project started, but doesn't have time to finish up.
+It's also okay to just have an idea that you want to throw out there for someone to work on.
+You might not even know what the best implementation might be! Thus, a good starter
+can also just have a good idea.
 
 ### Finishers
 
 Finishers are hungry for opportunity, and fun projects. A finisher can be
 very independent and curious, or ask for a bit more help. The finisher wants
-to take some project that has been started, and turn it into delicious bread.
+to take some project that has been started, and turn it into delicious bread,
+or an idea that isn't baked yet, and write the recipe.
 
 #### What makes a good finisher?
 
-The finisher, regardless of skill, should be motivated to take ownership of a project.
+The finisher, regardless of skill, should be motivated to take ownership of a project
+or an idea.
 
-### Matching
+### Submitting a Project or Idea
+
+You can submit a project or idea that needs love simply by opening an issue, and selecting
+the "Project or Idea that needs love" template.
+
+![img/needs-love-template.png](img/needs-love-template.png) 
+
+Once your idea is submit, it will (each night) render to the interface of
+projects that need love, which you can [see here](https://rseng.github.io/needs-love/).
+
+![img/needs-love-interface.png](img/needs-love-interface.png)
+
+### Matching Yourself
+
+When you navigate the web interface to find an issue that looks interesting,
+if you click the issue to navigate to the GitHub interface, you can have discussion
+with the author about how you might like to be involved. 
+
+#### What should you discuss?
 
 The match between the starter, both project and individual, and the finisher,
-is very important. Namely:
+is very important! While the criteria might vary by project, it's generally a good
+idea to open up a discussion on one of the [needs-love](https://github.com/rseng/needs-love/issues?q=is%3Aissue+is%3Aopen+label%3Aneeds-love)
+issues and discuss the following:
 
- - the starter should have some expertise in the technology, or vision for it to interact with the finisher.
- - the finisher should have less knowledge or expertise about this particular technology, and the aim is to learn it.
- - the starter and finisher should be matched based on having these opposite levels of skill for some domain or technology.
- - an established method of asking questions and general communication should be established (e.g., GitHub issues).
+ - if expertise is known to be needed, where will it come from?
+ - how can both parties best communicate, and ask questions?
+ - what kind of time frame do you have in mind?
+ - do you have all the resources that you need?
 
-It's clear that a good match can make or break a team. This is why the matching process is so important.
+If there is match, great! You can match yourself simply by applying the `matched` label. A GitHub action
+will handle removing the `needs-love` label so that others know that you've taken
+charge. The interface will update over night.
+
+### Updating a Match
+
+If you can no longer work on a project or idea, you should notify the starter 
+(the person that originally submit the issue) about this change, and he or she
+can remove the `matched` label. Once this is done, a GitHub action will
+add back the `needs-love` label so that others know that the issue is open to be
+worked on.
 
 ## What if someone doesn't ask for help?
 
@@ -71,31 +105,9 @@ an issue with "Good First Issue." For this reason, for the interested folks that
 persue a list of open source, research software engineering efforts, we provide the 
 [awesome-rseng](https://github.com/rseng/awesome-rseng) awesome list.
 
-## How does it work?
+## How can I contribute?
 
-### Submitting a Project
-
-You can submit a project that needs love simply by opening an issue, and selecting
-the "Project or Idea that needs love" template.
-
-![img/needs-love-template.png](img/needs-love-template.png) 
-
-Once your idea is submit, it will (each night) render to the interface of
-projects that need love (under development)
-
-### Requesting a Match
-
-When you navigate the web interface to find an issue that looks interesting,
-if you click the issue to navigate to the GitHub interface, you can have discussion
-with the author about how you might like to be involved. If there is match, great!
-You can be assigned to the issue, and the `needs-love` label is removed
-and replaced with the `matched` label. 
-
-### Updating a Match
-
-If you can no longer work on a project or idea, you should notify the starter 
-(the person that originally submit the issue) about this change, and he or she
-can remove the `matched` label and add the `needs-love` label back. The issue
-will again render in the interface.
-
-**more to be written**
+If you want to find a project to help with, you can browse the [issue board](https://github.com/rseng/needs-love/issues?q=is%3Aissue+is%3Aopen+label%3Aneeds-love) or the [interface here](https://rseng.github.io/needs-love/).
+It's also very helpful to peruse around some of your projects, or open source projects
+you contribute to, and look for good "needs love" issues. Many times, you can also have discussion
+with colleagues to find what they are working on (and wish they had more time to work on).
