@@ -15,7 +15,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         # Absolutely must download specific sha of script
-        wget https://raw.githubusercontent.com/rseng/needs-love/9c8443fd9801b12449e762c1682783d2298f0b6d/.github/update-labels.py
+        wget https://raw.githubusercontent.com/rseng/needs-love/aee2e1df982ba4d813851306cef786504aa68bdb/.github/update-labels.py
         export PATH="/usr/share/miniconda/bin:$PATH"
         source activate needslove
         chmod +x update-labels.py
