@@ -45,16 +45,18 @@ def main():
     response = None
     if action == 'labeled':
         print("%s was added, removing %s" %(label, other_label))
-        data = {"labels": [other_label]}
-        response = requests.delete(issue_url, headers=headers, json=data)
+        response = requests.delete(issue_url + "/" + other_label, headers=headers)
 
     elif action == "unlabeled":
         print("%s was removed, adding %s" %(label, other_label))
-        data = {"labels": [other_label]}
-        response = requests.post(issue_url, headers=headers, json=data)
+        response = requests.post(issue_url + "/" + other_label, headers=headers)
 
     print(response)
 
+    # 404 is allowed if someone already removed
+    if response:
+        if response.status_code not in [200, 201, 204, 404]:
+            sys.exit("Issue with creating or removing issue labels.")
 
 if __name__ == '__main__':
     main()
