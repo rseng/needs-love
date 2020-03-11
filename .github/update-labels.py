@@ -53,10 +53,8 @@ def main():
         data = {"labels": [other_label]}
         response = requests.post(issue_url, headers=headers, json=data)
 
-    # 404 is allowed if someone already removed
-    if response:
-        if response.status_code not in [200, 201, 404]:
-            sys.exit("Issue with creating or removing issue labels.")
+    print(response)
+
 
 if __name__ == '__main__':
     main()
