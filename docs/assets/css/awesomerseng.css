@@ -75,6 +75,10 @@ a:hover { text-decoration: underline; }
   padding: 15px 15px 10px 13px
 }
 
+.badge {
+  background-color: darkmagenta !important;
+}
+
 .next-button:hover, 
 .next-button:active, 
 .next-button:focus, 
@@ -94,7 +98,7 @@ a:hover { text-decoration: underline; }
 .page-header {
     margin: 0px;
     padding: 0px;
-    background-color: dimgrey;
+    background-color: darkmagenta;
     text-align: center;
     overflow: hidden;
     color: #fff;
